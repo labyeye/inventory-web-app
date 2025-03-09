@@ -18,7 +18,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="assets/img/favicon.jpg"
+      href="assets/img/favicon.png"
     />
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -301,7 +301,7 @@
         <div class="sidebar-inner slimscroll">
           <div id="sidebar-menu" class="sidebar-menu">
             <ul>
-              <li>
+              <li class="active">
                 <a href="index.html"
                   ><img src="assets/img/icons/dashboard.svg" alt="img" /><span>
                     Dashboard</span
@@ -311,21 +311,19 @@
               <li class="submenu">
                 <a href="javascript:void(0);"
                   ><img src="assets/img/icons/product.svg" alt="img" /><span>
-                    Product</span
+                    Inventory</span
                   >
                   <span class="menu-arrow"></span
                 ></a>
                 <ul>
-                  <li><a href="productlist.html">Product List</a></li>
-                  <li><a href="addproduct.html">Add Product</a></li>
-                  <li><a href="categorylist.html">Category List</a></li>
-                  <li><a href="addcategory.html">Add Category</a></li>
-                  <li><a href="subcategorylist.html">Sub Category List</a></li>
+                  <li><a href="./productlist.html">Inventory List</a></li>
+                  <li><a href="./addproduct.html">Add Inventory</a></li>
+                  <li><a href="./categorylist.html">Category List</a></li>
+                  <li><a href="./addcategory.html">Add Category</a></li>
                   <li>
-                    <a href="subaddcategory.html" class="active"
-                      >Add Sub Category</a
-                    >
+                    <a href="./subcategorylist.html">Sub Category List</a>
                   </li>
+                  <li><a href="./subaddcategory.html">Add Sub Category</a></li>
                 </ul>
               </li>
               <li class="submenu">
@@ -341,7 +339,7 @@
                 </ul>
               </li>
 
-              <li>
+              <li class="submenu">
                 <a href="javascript:void(0);"
                   ><img src="assets/img/icons/return1.svg" alt="img" /><span>
                     Return</span
@@ -367,13 +365,13 @@
                 ></a>
                 <ul>
                   <li>
-                    <a href="purchaseorderreport.html">Event Order report</a>
+                    <a href="./purchaseorderreport.html">Event Order report</a>
                   </li>
-                  <li><a href="inventoryreport.html">Inventory Report</a></li>
+                  <li><a href="./inventoryreport.html">Inventory Report</a></li>
                   <li>
-                    <a href="invoicereport.html">Inventory Return Report</a>
+                    <a href="./invoicereport.html">Inventory Return Report</a>
                   </li>
-                  <li><a href="purchasereport.html">Purchase Report</a></li>
+                  <li><a href="./purchasereport.html">Purchase Report</a></li>
                 </ul>
               </li>
               <li class="submenu">
@@ -388,22 +386,6 @@
                   <li><a href="userlists.html">Users List</a></li>
                 </ul>
               </li>
-              <li class="submenu">
-                <a href="javascript:void(0);"
-                  ><img src="assets/img/icons/settings.svg" alt="img" /><span>
-                    Settings</span
-                  >
-                  <span class="menu-arrow"></span
-                ></a>
-                <ul>
-                  <li><a href="generalsettings.html">General Settings</a></li>
-                  <li><a href="emailsettings.html">Email Settings</a></li>
-                  <li><a href="paymentsettings.html">Payment Settings</a></li>
-                  <li><a href="currencysettings.html">Currency Settings</a></li>
-                  <li><a href="grouppermissions.html">Group Permissions</a></li>
-                  <li><a href="taxrates.html">Tax Rates</a></li>
-                </ul>
-              </li>
             </ul>
           </div>
         </div>
@@ -413,8 +395,8 @@
         <div class="content">
           <div class="page-header">
             <div class="page-title">
-              <h4>Product Add sub Category</h4>
-              <h6>Create new product Category</h6>
+              <h4>Event Add</h4>
+              <h6>Create new event</h6>
             </div>
           </div>
 
@@ -423,38 +405,120 @@
               <div class="row">
                 <div class="col-lg-4 col-sm-6 col-12">
                   <div class="form-group">
-                    <label>Parent Category</label>
+                    <label>Event Name</label>
+                    <input type="text" placeholder="Enter Event Name" />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label>Event Date</label>
+                    <input type="date" />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label>Event Status</label>
                     <select class="select">
-                      <option>Choose Category</option>
-                      <option>Category</option>
+                      <option>Upcoming</option>
+                      <option>Ongoing</option>
+                      <option>Completed</option>
+                      <option>Cancelled</option>
                     </select>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label>Category Name</label>
-                    <input type="text" />
-                  </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 col-12">
-                  <div class="form-group">
-                    <label>Category Code</label>
-                    <input type="text" />
                   </div>
                 </div>
                 <div class="col-lg-12">
                   <div class="form-group">
                     <label>Description</label>
-                    <textarea class="form-control"></textarea>
+                    <textarea
+                      class="form-control"
+                      placeholder="Enter Event Description"
+                    ></textarea>
                   </div>
                 </div>
+
                 <div class="col-lg-12">
+                  <div class="card-header">
+                    <h5>Product Selection</h5>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label>Product</label>
+                    <select class="select">
+                      <option>Select Product</option>
+                      <option>Laptop</option>
+                      <option>Projector</option>
+                      <option>Furniture</option>
+                      <option>Sound System</option>
+                      <option>Decoration Items</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label>Category</label>
+                    <select class="select">
+                      <option>Select Category</option>
+                      <option>Electronics</option>
+                      <option>Furniture</option>
+                      <option>Decorations</option>
+                      <option>Audio Equipment</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label>Sub Category</label>
+                    <select class="select">
+                      <option>Select Sub Category</option>
+                      <option>Displays</option>
+                      <option>Seating</option>
+                      <option>Lighting</option>
+                      <option>Speakers</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label>Brand</label>
+                    <select class="select">
+                      <option>Select Brand</option>
+                      <option>Dell</option>
+                      <option>Sony</option>
+                      <option>IKEA</option>
+                      <option>JBL</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                  <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="number" placeholder="Enter Quantity" min="1" />
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label>Product Requirements Note</label>
+                    <textarea
+                      class="form-control"
+                      placeholder="Special requirements for the products"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="col-lg-12 mt-3">
+                  <button id="addProductBtn" class="btn btn-primary">
+                    Add Another Product
+                  </button>
+                </div>
+
+                <div class="col-lg-12 mt-4">
                   <a href="javascript:void(0);" class="btn btn-submit me-2"
-                    >Submit</a
+                    >Create Event</a
                   >
-                  <a href="subcategorylist.html" class="btn btn-cancel"
-                    >Cancel</a
-                  >
+                  <a href="saleslist.html" class="btn btn-cancel">Cancel</a>
                 </div>
               </div>
             </div>
@@ -479,19 +543,293 @@
     <script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
     <script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
 
+    <script src="assets/js/script.js"></script>
+
     <script type="module">
       import { auth, db } from "./assets/js/firebase.js";
-      import { initSubcategoryPage } from "./assets/js/subcategory-firebase.js";
+      import {
+        collection,
+        addDoc,
+        getDocs,
+        query,
+        where,
+        serverTimestamp,
+      } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
 
-      initSubcategoryPage();
+      // Firebase event form submission code
+      document.addEventListener("DOMContentLoaded", function () {
+        // Reference to the form
+        const submitBtn = document.querySelector(".btn-submit");
 
-      auth.onAuthStateChanged((user) => {
-        if (!user) {
-          window.location.href = "signin.html";
+        submitBtn.addEventListener("click", async function (e) {
+          e.preventDefault();
+
+          try {
+            // Get main event details
+            const eventName = document.querySelector(
+              'input[placeholder="Enter Event Name"]'
+            ).value;
+            const eventDate =
+              document.querySelector('input[type="date"]').value;
+
+            // Get the selected status option
+            const statusSelect = document.querySelector(
+              ".card-body > .row select.select"
+            );
+            const eventStatus =
+              statusSelect.options[statusSelect.selectedIndex].textContent;
+
+            const description = document.querySelector(
+              'textarea[placeholder="Enter Event Description"]'
+            ).value;
+
+            // Validate required fields
+            if (!eventName || !eventDate) {
+              showAlert("Please fill in all required fields", "error");
+              return;
+            }
+
+            // Create event document in Firestore
+            const eventData = {
+              name: eventName,
+              date: eventDate,
+              status: eventStatus,
+              description: description,
+              createdAt: serverTimestamp(),
+            };
+
+            // Add event to Firestore
+            const eventRef = await addDoc(collection(db, "events"), eventData);
+            const eventId = eventRef.id;
+            console.log("Event document created with ID: ", eventId);
+
+            // Process the main product section
+            const mainForm = document.querySelector(".card-body > .row");
+
+            // Get all select elements in the main form
+            const selects = mainForm.querySelectorAll("select.select");
+
+            // Find product, category, subcategory, and brand selects
+            let productSelect, categorySelect, subCategorySelect, brandSelect;
+
+            // Skip the first select (event status) and find the next ones
+            for (let i = 1; i < selects.length; i++) {
+              const label = selects[i]
+                .closest(".form-group")
+                .querySelector("label").textContent;
+              if (label === "Product") productSelect = selects[i];
+              else if (label === "Category") categorySelect = selects[i];
+              else if (label === "Sub Category") subCategorySelect = selects[i];
+              else if (label === "Brand") brandSelect = selects[i];
+            }
+
+            if (productSelect) {
+              const product =
+                productSelect.options[productSelect.selectedIndex].text;
+              const category = categorySelect
+                ? categorySelect.options[categorySelect.selectedIndex].text
+                : "";
+              const subCategory = subCategorySelect
+                ? subCategorySelect.options[subCategorySelect.selectedIndex]
+                    .text
+                : "";
+              const brand = brandSelect
+                ? brandSelect.options[brandSelect.selectedIndex].text
+                : "";
+
+              // Get quantity input
+              const quantityInput = mainForm.querySelector(
+                'input[type="number"]'
+              );
+              const quantity = quantityInput
+                ? parseInt(quantityInput.value, 10) || 0
+                : 0;
+
+              // Get the requirements note
+              const requirementsNote = mainForm.querySelector(
+                'textarea[placeholder="Special requirements for the products"]'
+              );
+              const note = requirementsNote ? requirementsNote.value : "";
+
+              // Skip if "Select Product" is chosen
+              if (product && product !== "Select Product") {
+                // Add product to eventProducts collection
+                await addDoc(collection(db, "eventProducts"), {
+                  eventId: eventId,
+                  product: product,
+                  category: category,
+                  subCategory: subCategory,
+                  brand: brand,
+                  quantity: quantity,
+                  note: note,
+                  createdAt: serverTimestamp(),
+                });
+
+                console.log("Main product added for event:", eventId);
+              }
+            }
+
+            // Process all additional product sections
+            const additionalSections =
+              document.querySelectorAll(".product-section");
+
+            for (const section of additionalSections) {
+              const sectionSelects = section.querySelectorAll("select.select");
+
+              if (sectionSelects.length >= 4) {
+                const productValue =
+                  sectionSelects[0].options[sectionSelects[0].selectedIndex]
+                    .text;
+                const categoryValue =
+                  sectionSelects[1].options[sectionSelects[1].selectedIndex]
+                    .text;
+                const subCategoryValue =
+                  sectionSelects[2].options[sectionSelects[2].selectedIndex]
+                    .text;
+                const brandValue =
+                  sectionSelects[3].options[sectionSelects[3].selectedIndex]
+                    .text;
+
+                // Get quantity for this section
+                const sectionQuantityInput = section.querySelector(
+                  'input[type="number"]'
+                );
+                const sectionQuantity = sectionQuantityInput
+                  ? parseInt(sectionQuantityInput.value, 10) || 0
+                  : 0;
+
+                // Skip if "Select Product" is chosen
+                if (productValue && productValue !== "Select Product") {
+                  // Add additional product to eventProducts collection
+                  await addDoc(collection(db, "eventProducts"), {
+                    eventId: eventId,
+                    product: productValue,
+                    category: categoryValue,
+                    subCategory: subCategoryValue,
+                    brand: brandValue,
+                    quantity: sectionQuantity,
+                    note: "", // Additional sections don't have separate notes
+                    createdAt: serverTimestamp(),
+                  });
+
+                  console.log("Additional product added for event:", eventId);
+                }
+              }
+            }
+
+            // Show success message
+            showAlert("Event created successfully!", "success");
+
+            // Redirect to events list page after short delay
+            setTimeout(() => {
+              window.location.href = "saleslist.html";
+            }, 2000);
+          } catch (error) {
+            console.error("Error adding event: ", error);
+            showAlert("Error creating event: " + error.message, "error");
+          }
+        });
+
+        // Helper function to show SweetAlert messages
+        function showAlert(message, type) {
+          Swal.fire({
+            title: type === "success" ? "Success!" : "Error!",
+            text: message,
+            icon: type,
+            confirmButtonText: "OK",
+          });
         }
       });
     </script>
 
-    <script src="assets/js/script.js"></script>
+    <script>
+      // Function to add another product section
+      $(document).ready(function () {
+        $("#addProductBtn").click(function () {
+          // Clone the product selection section
+          const productSection = `
+            <div class="row product-section mt-4 pt-3 border-top">
+              <div class="col-lg-12">
+                <div class="card-header">
+                  <h5>Additional Product</h5>
+                </div>
+              </div>
+              
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label>Product</label>
+                  <select class="select">
+                    <option>Select Product</option>
+                    <option>Laptop</option>
+                    <option>Projector</option>
+                    <option>Furniture</option>
+                    <option>Sound System</option>
+                    <option>Decoration Items</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label>Category</label>
+                  <select class="select">
+                    <option>Select Category</option>
+                    <option>Electronics</option>
+                    <option>Furniture</option>
+                    <option>Decorations</option>
+                    <option>Audio Equipment</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label>Sub Category</label>
+                  <select class="select">
+                    <option>Select Sub Category</option>
+                    <option>Displays</option>
+                    <option>Seating</option>
+                    <option>Lighting</option>
+                    <option>Speakers</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label>Brand</label>
+                  <select class="select">
+                    <option>Select Brand</option>
+                    <option>Dell</option>
+                    <option>Sony</option>
+                    <option>IKEA</option>
+                    <option>JBL</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <label>Quantity</label>
+                  <input type="number" placeholder="Enter Quantity" min="1" />
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="form-group">
+                  <button class="btn btn-danger remove-product">Remove</button>
+                </div>
+              </div>
+            </div>
+          `;
+
+          // Insert before the add product button
+          $(productSection).insertBefore($("#addProductBtn").parent().parent());
+
+          // Initialize select2 for the new dropdowns
+          $(".select").select2();
+
+          // Add remove functionality
+          $(".remove-product").click(function () {
+            $(this).closest(".product-section").remove();
+          });
+        });
+      });
+    </script>
   </body>
 </html>
